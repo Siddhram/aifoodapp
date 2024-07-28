@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:food/components/mybutton.dart';
+import 'package:food/food/aipage.dart';
 
 import 'package:food/food/foodclass.dart';
 import 'package:food/food/restarunt.dart';
@@ -118,11 +119,22 @@ class _FoodPageState extends State<FoodPage> {
           ),
           Mybutton(
               ontap: () {
+                // addtocart(widget.food, widget.selectedAddon);
+                Navigator.push(context, MaterialPageRoute(builder: (contex) {
+                  return AIpage();
+                }));
+              },
+              text: "Build with AI "),
+          SizedBox(
+            height: 15,
+          ),
+          Mybutton(
+              ontap: () {
                 addtocart(widget.food, widget.selectedAddon);
               },
               text: "Add to cart"),
           SizedBox(
-            height: 25,
+            height: 30,
           )
         ]),
       ),

@@ -16,6 +16,8 @@ import 'package:food/servises/auth/login_or_resiter.dart';
 import 'package:food/themes/theme_provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+VoidCallback? startHandler;
+VoidCallback? completionHandler;
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
